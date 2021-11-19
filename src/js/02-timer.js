@@ -27,6 +27,8 @@ const fp = flatpickr(datetimePicker, {
 });
 start.disabled = true;
 
+
+
 function validateChoice(currentDate) {
     if (currentDate < new Date()) {
         Notiflix.Notify.warning("Please choose a date in the future")
@@ -37,6 +39,7 @@ function validateChoice(currentDate) {
 
 function timer() {
     start.disabled = true;
+    datetimePicker.disabled = true;
     intervalId =
         setInterval(() => {
             const currentTime = Date.now()

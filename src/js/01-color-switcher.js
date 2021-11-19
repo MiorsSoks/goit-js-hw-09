@@ -8,11 +8,12 @@ function getRandomHexColor() {
 
 function changeBackground() {
     body.style.backgroundColor = `${getRandomHexColor()}`;
-    start.disabled = true;
+    
 }
 let IntervalId = null
  
 const onClickStart = () => {
+  start.disabled = true;
   IntervalId =  setInterval(changeBackground, 1000)
 }
 const onClickStop = () => {
